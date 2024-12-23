@@ -1,3 +1,256 @@
 <html>
-<pr>Hello World</pr>
+<head>
+    <title>Create a form</title>
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: whitesmoke;
+            color: blue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h2 {
+            font-family: 'Algerian', sans-serif;
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Form Container Styling */
+        .form-container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Fields Styling */
+        .form-container b {
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-container input[type="submit"],
+        .form-container input[type="reset"],
+        .form-container input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="reset"]:hover,
+        .form-container input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        /* Labels for Grouping of Options */
+        .form-container .options-group {
+            margin-top: 10px;
+        }
+
+        .form-container label {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Resume</h2>
+
+    <div class="form-container">
+        <form method="POST" action="submit_form.php"> <!-- Replace with your server-side script -->
+
+            <b>Name:</b>
+            <input type="text" name="aa" value="Enter your name" size="40"><br><br>
+
+            <b>Father's Name:</b>
+            <input type="text" name="cc" value="Enter your Father's name" size="40"><br><br>
+
+            <b>Mother's Name:</b>
+            <input type="text" name="bb" value="Enter your mother's name" size="40"><br><br>
+
+            <b>Address:</b><br>
+            <textarea name="address" rows="10" cols="40"></textarea><br><br>
+
+            <b>Telephone No.:</b>
+            <input type="text" name="telephone" size="30" value="Enter your telephone number"><br><br>
+
+            <b>E-mail:</b>
+            <input type="text" name="email" size="30" value="Enter your email address"><br><br>
+
+            <b>Gender:</b><br>
+            <div class="options-group">
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div><br><br>
+
+            <b>Marital Status:</b><br>
+            <div class="options-group">
+                <input type="radio" name="marital_status" value="Married"> Married
+                <input type="radio" name="marital_status" value="Unmarried"> Unmarried
+            </div><br><br>
+
+            <b>Date of Birth:</b><br>
+            Day:
+            <select name="dob_day">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+
+            Month:
+            <select name="dob_month">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+
+            Year:
+            <select name="dob_year">
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+            </select><br><br>
+
+            <b>Category:</b><br>
+            <div class="options-group">
+                <input type="radio" name="cl" value="General"> General
+                <input type="radio" name="cl" value="OBC"> OBC
+                <input type="radio" name="cl" value="SC"> SC
+                <input type="radio" name="cl" value="ST"> ST
+            </div><br><br>
+
+            <b>Qualification:</b><br>
+            <div class="options-group">
+                <input type="checkbox" name="qualification[]" value="Intermediate"> Intermediate
+                <input type="checkbox" name="qualification[]" value="Graduate"> Graduate
+                <input type="checkbox" name="qualification[]" value="Post Graduate"> Post Graduate
+                <input type="checkbox" name="qualification[]" value="MCA"> MCA
+                <input type="checkbox" name="qualification[]" value="MBA"> MBA
+            </div><br><br>
+
+            <b>Language:</b><br>
+            <div class="options-group">
+                <input type="checkbox" name="language[]" value="Odia"> Odia
+                <input type="checkbox" name="language[]" value="English"> English
+                <input type="checkbox" name="language[]" value="Hindi"> Hindi
+                <input type="checkbox" name="language[]" value="Bengali"> Bengali
+            </div><br><br>
+
+            <b>Computer Language Known:</b><br>
+            <div class="options-group">
+                <input type="checkbox" name="computer_language[]" value="C"> C
+                <input type="checkbox" name="computer_language[]" value="C++"> C++
+                <input type="checkbox" name="computer_language[]" value="Java"> Java
+                <input type="checkbox" name="computer_language[]" value="JavaScript"> JavaScript
+                <input type="checkbox" name="computer_language[]" value="HTML"> HTML
+                <input type="checkbox" name="computer_language[]" value="CSS"> CSS
+            </div><br><br>
+
+            <b>Select Country:</b><br>
+            <select name="country">
+                <option>India</option>
+                <option>Australia</option>
+                <option>Japan</option>
+                <option>England</option>
+                <option>USA</option>
+            </select><br><br>
+
+            <b>Select State:</b><br>
+            <select name="state">
+                <option>Odisha</option>
+                <option>Gujarat</option>
+                <option>Punjab</option>
+                <option>Kerala</option>
+                <option>Tamilnadu</option>
+                <option>UP</option>
+                <option>Bihar</option>
+            </select><br><br>
+
+            <input type="submit" name="submit" value="Send">
+            <input type="reset" name="reset" value="Cancel">
+            <input type="button" name="ok" value="Ok">
+        </form>
+    </div>
+</body>
 </html>
